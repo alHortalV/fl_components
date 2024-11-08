@@ -11,4 +11,9 @@ class AppRoutes {
     "card": (BuildContext context) => const CardScreen(),
     "home": (BuildContext context) => const HomeScreen(),
   };
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+    return MaterialPageRoute(
+        builder: (context) =>
+            const AlertScreen()); //En caso de error con el pushNamed nos redireccionará a AlertScreen
+  }
 }
