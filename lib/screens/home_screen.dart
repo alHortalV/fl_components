@@ -1,3 +1,4 @@
+import 'package:fl_componentes/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,14 +16,14 @@ class HomeScreen extends StatelessWidget {
         body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
             // El contexto aLmacena información y se utiliza para intercambiar información entre un wdget y otro
-            leading: const Icon(Icons.accessibility_new_outlined),
-            title: const Text("Nombre de ruta"),
+            leading: Icon(AppRoutes.menuOptions[index].icon),
+            title: Text(AppRoutes.menuOptions[index].name),
             onTap: () {
-              Navigator.pushNamed(context, "card");
+              Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
             },
           ),
           separatorBuilder: (context, index) => const Divider(),
-          itemCount: 5,
+          itemCount: AppRoutes.menuOptions.length,
         ));
   }
 }
