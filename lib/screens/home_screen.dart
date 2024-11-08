@@ -22,7 +22,8 @@ class HomeScreen extends StatelessWidget {
               final route = MaterialPageRoute(
                   builder: (context) =>
                       const Listview1Screen()); // Va a devolver el Listview1Screen
-              Navigator.push(context, route);
+              Navigator.pushReplacement(context,
+                  route); //Destruir la vuelta a atrás (pushReplacement)
             },
           ),
           separatorBuilder: (context, index) => const Divider(),
