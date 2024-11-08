@@ -14,11 +14,11 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-            // El context aLmacena información y se utiliza para intercambiar información entre un widget y otro
+            // El contexto aLmacena información y se utiliza para intercambiar información entre un wdget y otro
             leading: const Icon(Icons.accessibility_new_outlined),
             title: const Text("Nombre de ruta"),
             onTap: () {
-              Navigator.pushNamed(context, "card");
+              Navigator.pushNamed(context, "cardasd");
             },
           ),
           separatorBuilder: (context, index) => const Divider(),
