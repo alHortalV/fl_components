@@ -33,7 +33,7 @@ class AppRoutes {
     MenuOption(
       route: 'alert',
       name: 'Alert',
-      icon: Icons.dangerous,
+      icon: Icons.add_alert,
       screen: const HomeScreen(),
     ),
   ];
