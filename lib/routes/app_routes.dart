@@ -16,25 +16,25 @@ class AppRoutes {
       route: 'listview1',
       name: 'Listview1',
       icon: Icons.list_alt,
-      screen: const HomeScreen(),
+      screen: const Listview1Screen(),
     ),
     MenuOption(
       route: 'listview2',
       name: 'Listview1',
       icon: Icons.list_alt,
-      screen: const HomeScreen(),
+      screen: const Listview2Screen(),
     ),
     MenuOption(
       route: 'card',
       name: 'Card',
       icon: Icons.card_giftcard,
-      screen: const HomeScreen(),
+      screen: const CardScreen(),
     ),
     MenuOption(
       route: 'alert',
       name: 'Alert',
-      icon: Icons.add_alert,
-      screen: const HomeScreen(),
+      icon: Icons.add_alarm,
+      screen: const AlertScreen(),
     ),
   ];
 
