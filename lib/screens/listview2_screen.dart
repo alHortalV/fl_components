@@ -17,6 +17,10 @@ class Listview2Screen extends StatelessWidget {
                 ListTile(
                   trailing: const Icon(Icons.arrow_forward_ios_outlined),
                   title: Text(options[index]),
+                  onTap: () {
+                    final casa = options[index];
+                    print(casa);
+                  },
                 ),
             separatorBuilder: (context, index) =>
                 const Divider(), // Para dividir los items

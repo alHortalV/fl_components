@@ -15,13 +15,12 @@ class Listview1Screen extends StatelessWidget {
           children: [
             ...options // Recorre el array de options
                 .map(
-                  (e) => ListTile(
-                    trailing: const Icon(Icons
-                        .arrow_forward_ios_outlined), //leading para poner el icono a la izquierda
-                    title: Text(e),
-                  ),
-                )
-                .toList(), // Se puede remover
+              (e) => ListTile(
+                trailing: const Icon(Icons
+                    .arrow_forward_ios_outlined), //leading para poner el icono a la izquierda
+                title: Text(e),
+              ),
+            ), // Se puede remover
 
             //Hace el scroll solo
           ],
