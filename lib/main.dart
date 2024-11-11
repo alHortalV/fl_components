@@ -14,6 +14,14 @@ class MyApp extends StatelessWidget {
         // home: const Listview2Screen(),
         initialRoute: AppRoutes.initialRoute,
         routes: AppRoutes.getAppRoutes(),
-        onGenerateRoute: AppRoutes.onGenerateRoute);
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        theme: ThemeData.light().copyWith(
+          //Color primario
+          primaryColor: Colors.blueGrey,
+          //App Bar Theme
+          appBarTheme: const AppBarTheme(
+            color: Colors.redAccent,
+          ),
+        ));
   }
 }
