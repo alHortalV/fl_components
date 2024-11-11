@@ -9,7 +9,8 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
           color: primary,
           titleTextStyle: TextStyle(
-              color: Colors.white, fontSize: 20)), //fontWeight: FontWeight.bold
+              color: Colors.white, fontSize: 20), //fontWeight: FontWeight.bold
+          iconTheme: IconThemeData(color: Colors.white)),
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
       ));
