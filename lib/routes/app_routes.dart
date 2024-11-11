@@ -20,7 +20,7 @@ class AppRoutes {
     ),
     MenuOption(
       route: 'listview2',
-      name: 'Listview1',
+      name: 'Listview2',
       icon: Icons.list_alt,
       screen: const Listview2Screen(),
     ),
