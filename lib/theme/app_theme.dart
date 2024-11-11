@@ -11,7 +11,13 @@ class AppTheme {
           titleTextStyle: TextStyle(
               color: Colors.white, fontSize: 20), //fontWeight: FontWeight.bold
           iconTheme: IconThemeData(color: Colors.white)),
+      //ListTile Theme
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
-      ));
+      ),
+      //TextButton Theme
+      textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+              foregroundColor:
+                  primary))); //Establecer color de los botones (primary está deprecado)
 }
