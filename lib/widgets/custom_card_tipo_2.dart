@@ -26,11 +26,12 @@ class CustomCardTipo2 extends StatelessWidget {
               fadeInDuration: const Duration(
                   milliseconds: 3000), // La duración del desvanecimiento
             ),
-            Container(
-              alignment: AlignmentDirectional.centerEnd,
-              padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: Text(textUrl ?? '??'),
-            ),
+            if (textUrl != null)
+              Container(
+                alignment: AlignmentDirectional.centerEnd,
+                padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
+                child: Text(textUrl ?? '??'),
+              ),
           ],
         ));
   }
