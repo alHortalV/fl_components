@@ -8,9 +8,14 @@ class CustomCardTipo2 extends StatelessWidget {
     return const Card(
         child: Column(
       children: [
-        Image(
+        FadeInImage(
             image: NetworkImage(
-                "https://img.goodfon.com/original/1920x1080/b/69/starkiller-by-sidezeo-star-wars-fog-sith-startroopers-weapon.jpg"))
+                "https://img.goodfon.com/original/1920x1080/b/69/starkiller-by-sidezeo-star-wars-fog-sith-startroopers-weapon.jpg"),
+            placeholder: AssetImage("assets/ZKZg.gif"),
+            width: double.infinity, //Ocupa todo el ancho posible
+            height: 260,
+            fit: BoxFit.cover // La relación aspecto sigue igual
+            ),
       ],
     ));
   }
