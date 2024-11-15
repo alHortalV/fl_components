@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
   final String imageUrl;
-  final String textUrl;
-  const CustomCardTipo2(
-      {super.key, required this.imageUrl, required this.textUrl});
+  final String? textUrl;
+  const CustomCardTipo2({super.key, required this.imageUrl, this.textUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class CustomCardTipo2 extends StatelessWidget {
             Container(
               alignment: AlignmentDirectional.centerEnd,
               padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: Text(textUrl),
+              child: Text(textUrl ?? '??'),
             ),
           ],
         ));

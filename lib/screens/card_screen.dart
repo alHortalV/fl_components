@@ -37,8 +37,7 @@ class CardScreen extends StatelessWidget {
             SizedBox(height: 10),
             CustomCardTipo2(
                 imageUrl:
-                    "https://lumiere-a.akamaihd.net/v1/images/anakin_skywalker_003_fbc652cd.jpeg?region=0,0,1379,809",
-                textUrl: 'Anakin Skywalker'),
+                    "https://lumiere-a.akamaihd.net/v1/images/anakin_skywalker_003_fbc652cd.jpeg?region=0,0,1379,809"),
           ]),
     );
   }
