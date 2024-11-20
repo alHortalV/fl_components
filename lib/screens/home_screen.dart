@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-            // El contexto aLmacena información y se utiliza para intercambiar información entre un wdget y otro
+            // El contexto aLmacena información y se utiliza para intercambiar información entre un widget y otro
             leading: Icon(AppRoutes.menuOptions[index].icon),
             title: Text(AppRoutes.menuOptions[index].name),
             onTap: () {

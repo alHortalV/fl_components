@@ -28,6 +28,7 @@ class Listview2Screen extends StatelessWidget {
                     final imageUrl = imageUrls[index];
                     print(casa);
                     Navigator.push(
+                      //Envia los datos a Casa Screen
                       context,
                       MaterialPageRoute(
                         builder: (context) => CasaScreen(

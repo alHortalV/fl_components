@@ -11,7 +11,7 @@ class CasaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(textUrl), // Cambia esto por el nombre que desees
+          title: Text(textUrl),
         ),
         body: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
