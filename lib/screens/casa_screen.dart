@@ -17,6 +17,9 @@ class CasaScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             children: [
               CustomCardTipo2(imageUrl: imageUrl, textUrl: textUrl),
-            ]));
+            ]),
+        floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.close),
+            onPressed: () => Navigator.pop(context)));
   }
 }
