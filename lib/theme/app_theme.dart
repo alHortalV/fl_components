@@ -23,5 +23,12 @@ class AppTheme {
           backgroundColor: primary,
           elevation: 5,
           shape: StadiumBorder(),
-          foregroundColor: secondary));
+          foregroundColor: secondary),
+      //ElevatedButtons
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: primary,
+              foregroundColor: secondary,
+              shape: const StadiumBorder(),
+              elevation: 5)));
 }
