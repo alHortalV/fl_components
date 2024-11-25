@@ -6,12 +6,22 @@ class AlertScreen extends StatelessWidget {
     // Para no perder eficiencia haciendolo StatefulWidget
     //print("He pulsado en la alerta");
     showDialog(
+        barrierDismissible:
+            true, // Para poder salirse de la alerta haciendo clic fuera del recuadro
         context: context,
         builder: (context) {
           return const AlertDialog(
-            title: Text("Alerta"),
-            content: Text("Este es el contenido del mensaje de alerta"),
-          );
+              title: Text("Alerta"),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Este es el contenido del mensaje de alerta"),
+                  SizedBox(height: 20),
+                  FlutterLogo(
+                    size: 100,
+                  )
+                ],
+              ));
         });
   }
 
