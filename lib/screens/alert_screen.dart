@@ -7,21 +7,29 @@ class AlertScreen extends StatelessWidget {
     //print("He pulsado en la alerta");
     showDialog(
         barrierDismissible:
-            true, // Para poder salirse de la alerta haciendo clic fuera del recuadro
+            false, // Para no poder salirse de la alerta haciendo clic fuera del recuadro
         context: context,
         builder: (context) {
-          return const AlertDialog(
-              title: Text("Alerta"),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("Este es el contenido del mensaje de alerta"),
-                  SizedBox(height: 20),
-                  FlutterLogo(
-                    size: 100,
-                  )
-                ],
-              ));
+          return AlertDialog(
+            title: const Text("Alerta"),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.circular(10)),
+            content: const Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Este es el contenido del mensaje de alerta"),
+                SizedBox(height: 20),
+                FlutterLogo(
+                  size: 100,
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text("Cancelar"))
+            ],
+          );
         });
   }
 
