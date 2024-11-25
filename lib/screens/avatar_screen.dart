@@ -20,8 +20,12 @@ class AvatarScreen extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text('AvatarScreen'),
-      ),
+          child: CircleAvatar(
+        maxRadius: 100,
+        backgroundImage: NetworkImage(
+          "https://estaticos-cdn.prensaiberica.es/clip/eb71b691-aa8d-4742-a48e-dab0f9f04f6d_mobile-ep-aspect-ratio_320w_0.jpg",
+        ),
+      )),
     );
   }
 }
