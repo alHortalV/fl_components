@@ -30,9 +30,19 @@ class InputsScreen extends StatelessWidget {
               },
               autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
-                  hintText: 'Nombre y Apellidos',
-                  labelText: 'Nombre y Apellidos',
-                  helperText: 'Sólo letras'),
+                hintText: 'Nombre y Apellidos',
+                labelText: 'Nombre y Apellidos',
+                helperText: 'Solo letras',
+                suffixIcon: const Icon(Icons.person_2_outlined),
+                icon: const Icon(Icons.assignment_ind_outlined),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  // borderRadius: BorderRadius.only(
+                  //     bottomLeft: Radius.circular(20),
+                  //     topRight: Radius.circular(10)),
+                  // //borderSide: BorderSide()
+                ),
+              ),
             )
           ],
         ),
