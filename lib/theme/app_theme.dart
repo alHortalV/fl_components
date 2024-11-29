@@ -30,5 +30,15 @@ class AppTheme {
               backgroundColor: primary,
               foregroundColor: secondary,
               shape: const StadiumBorder(),
-              elevation: 5)));
+              elevation: 5)),
+      inputDecorationTheme: InputDecorationTheme(
+        floatingLabelStyle: const TextStyle(color: primary),
+        enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: primary),
+            borderRadius: BorderRadius.circular(20)),
+        focusedBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: primary, width: 2),
+            borderRadius: BorderRadius.circular(10)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      ));
 }
