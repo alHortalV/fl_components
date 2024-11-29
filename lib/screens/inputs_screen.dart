@@ -1,3 +1,4 @@
+import 'package:fl_componentes/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class InputsScreen extends StatelessWidget {
@@ -5,55 +6,88 @@ class InputsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myFormKey = GlobalKey<FormState>();
+    final Map<String, String> formValues = {
+      'nombre': 'Andrés',
+      'apellido': 'Iniesta',
+      'email': 'iniesta@gmail.com',
+      'password': '123456',
+      'role': 'usuario'
+    };
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         // Poder hacer scroll hacia arriba y hacia abajo si ocupa más de la pantalla el contenido
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          children: [CustomTextFormField()],
-        ),
-      ),
-    );
-  }
-}
-
-class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      autofocus: true, // Se pone el cursor en el campo de texto
-      //initialValue: "Escribe aquí",
-      textCapitalization: TextCapitalization
-          .words, // Para poner en mayúscula la primera letra de cada palabra
-      onChanged: (value) {
-        // Esto es el valor del input
-        print('value: $value');
-      },
-      validator: (value) {
-        if (value!.length < 3) {
-          return 'Mínimo 3 caracteres';
-        }
-      },
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration: InputDecoration(
-        hintText: 'Nombre y Apellidos',
-        labelText: 'Nombre y Apellidos',
-        helperText: 'Solo letras',
-        suffixIcon: const Icon(Icons.person_2_outlined),
-        icon: const Icon(Icons.assignment_ind_outlined),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          // borderRadius: BorderRadius.only(
-          //     bottomLeft: Radius.circular(20),
-          //     topRight: Radius.circular(10)),
-          // //borderSide: BorderSide()
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Form(
+          key: myFormKey,
+          child: Column(
+            children: [
+              CustomTextFormField(
+                hintText: "Nombre",
+                labelText: "Nombre",
+                helperText: "Solo letras",
+                capitalization: TextCapitalization.words,
+                icon: Icons.verified_user,
+                suffixIcon: Icons.person_2_rounded,
+                obscureText: false,
+                formProperty: 'formValues',
+                formValues: {},
+              ),
+              const SizedBox(height: 30),
+              CustomTextFormField(
+                hintText: "Apellidos",
+                labelText: "Apellidos",
+                capitalization: TextCapitalization.words,
+                icon: Icons.verified_user,
+                suffixIcon: Icons.person_2_rounded,
+                obscureText: false,
+                formProperty: formValues,
+                formValues: {},
+              ),
+              const SizedBox(height: 30),
+              CustomTextFormField(
+                hintText: "E-mail",
+                labelText: "E-mail",
+                icon: Icons.verified_user,
+                suffixIcon: Icons.mail,
+                keyboardType: TextInputType.emailAddress,
+                obscureText: false,
+                capitalization: TextCapitalization.none,
+                formProperty: formValues,
+                formValues: {},
+              ),
+              const SizedBox(height: 30),
+              CustomTextFormField(
+                hintText: "Contraseña",
+                labelText: "Contraseña",
+                helperText: "Mínimo 6 palabras",
+                icon: Icons.verified_user,
+                suffixIcon: Icons.lock,
+                obscureText: true,
+                capitalization: TextCapitalization.none,
+                formProperty: formValues,
+                formValues: {},
+              ),
+              const SizedBox(height: 30),
+              SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        FocusScope.of(context).requestFocus(FocusNode());
+                        if (!myFormKey.currentState!.validate()) {
+                          print('Formulario no válido');
+                          return;
+                        } else {
+                          print('Formulario válido');
+                          return;
+                        }
+                      },
+                      child: const Text("Enviar")))
+            ],
+          ),
         ),
       ),
     );
