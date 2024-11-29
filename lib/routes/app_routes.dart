@@ -36,6 +36,12 @@ class AppRoutes {
       icon: Icons.add_alarm,
       screen: const AlertScreen(),
     ),
+    MenuOption(
+      route: 'input',
+      name: 'Forms: Input',
+      icon: Icons.input,
+      screen: const InputsScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
