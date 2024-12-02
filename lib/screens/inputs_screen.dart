@@ -33,8 +33,8 @@ class InputsScreen extends StatelessWidget {
                 icon: Icons.verified_user,
                 suffixIcon: Icons.person_2_rounded,
                 obscureText: false,
-                formProperty: 'formValues',
-                formValues: {},
+                formProperty: 'nombre',
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
               CustomTextFormField(
@@ -44,8 +44,8 @@ class InputsScreen extends StatelessWidget {
                 icon: Icons.verified_user,
                 suffixIcon: Icons.person_2_rounded,
                 obscureText: false,
-                formProperty: formValues,
-                formValues: {},
+                formProperty: 'apellidos',
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
               CustomTextFormField(
@@ -56,8 +56,8 @@ class InputsScreen extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
                 capitalization: TextCapitalization.none,
-                formProperty: formValues,
-                formValues: {},
+                formProperty: 'email',
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
               CustomTextFormField(
@@ -68,8 +68,8 @@ class InputsScreen extends StatelessWidget {
                 suffixIcon: Icons.lock,
                 obscureText: true,
                 capitalization: TextCapitalization.none,
-                formProperty: formValues,
-                formValues: {},
+                formProperty: 'password',
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
               SizedBox(
