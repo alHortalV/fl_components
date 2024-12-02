@@ -37,6 +37,10 @@ class CustomTextFormField extends StatelessWidget {
           obscureText, // Para que el campo de texto sea de tipo contraseña
       onChanged: (value) =>
           formValues[formProperty] = value, // Para guardar el valor en el mapa
+      // onChanged: (value) { // Para ver los valores en consola
+      //   formValues[formProperty] = value;
+      //   print('Valores de formValues: ${formValues.toString()}');
+      // },
       validator: (value) {
         if (value!.length < 3) {
           return 'Mínimo 3 caracteres';
