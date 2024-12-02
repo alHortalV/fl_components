@@ -1,5 +1,6 @@
 import 'package:fl_componentes/models/models.dart';
 import 'package:fl_componentes/screens/screens.dart';
+import 'package:fl_componentes/screens/slider_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -51,6 +52,12 @@ class AppRoutes {
       name: 'Forms: Input',
       icon: Icons.input,
       screen: const InputsScreen(),
+    ),
+    MenuOption(
+      route: 'slider',
+      name: 'Slider',
+      icon: Icons.social_distance_rounded,
+      screen: const SliderScreen(),
     ),
   ];
 

@@ -40,5 +40,9 @@ class AppTheme {
             borderSide: const BorderSide(color: primary, width: 2),
             borderRadius: BorderRadius.circular(10)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      sliderTheme: const SliderThemeData(
+        activeTrackColor: primary,
+        thumbColor: primary,
       ));
 }

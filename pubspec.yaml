@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_advanced_switch: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -19,4 +20,4 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/
+    - assets/
