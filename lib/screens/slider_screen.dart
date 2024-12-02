@@ -18,6 +18,7 @@ class _SliderScreenState extends State<SliderScreen> {
       appBar: AppBar(title: const Text('Slider')),
       body: Column(children: [
         Slider.adaptive(
+            // Si quieres que se vea diferente en IOS y en Android
             min: _valueMin,
             max: _valueMax,
             value: _sliderValue,
