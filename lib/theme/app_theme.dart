@@ -38,10 +38,15 @@ class AppTheme {
 
       //Input Decoration
       inputDecorationTheme: InputDecorationTheme(
+        // Lo de arriba
         floatingLabelStyle: const TextStyle(color: primary),
+
+        // Para añadir borde
         enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: primary),
             borderRadius: BorderRadius.circular(20)),
+
+        // Cuando estás dentro del input
         focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: primary, width: 2),
             borderRadius: BorderRadius.circular(10)),
