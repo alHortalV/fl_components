@@ -59,6 +59,12 @@ class AppRoutes {
       icon: Icons.social_distance_rounded,
       screen: const SliderScreen(),
     ),
+    MenuOption(
+      route: 'listviewbuilder',
+      name: 'ListViewBuilder',
+      icon: Icons.build_circle_outlined,
+      screen: const ListViewBuilderScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

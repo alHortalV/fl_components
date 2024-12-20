@@ -6,3 +6,4 @@ export 'package:fl_componentes/screens/listview2_screen.dart';
 export 'package:fl_componentes/screens/inputs_screen.dart';
 export 'package:fl_componentes/screens/avatar_screen.dart';
 export 'package:fl_componentes/screens/animated_screen.dart';
+export 'package:fl_componentes/screens/listviewbuilder_screen.dart';
